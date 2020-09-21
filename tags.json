@@ -1,0 +1,146 @@
+[
+  {
+    "name" : "GIF",
+    "desc" : "Animated GIF (Graphics Interchange Format) images are a legacy format for displaying timed images on the web. The format has resurged in popularity with the rise of mobile and other platforms, where the quick load times combined with no reliance on plug-ins make GIF animations accessible."
+  },
+  {
+    "name" : "Poetry",
+    "desc" : "Electronic poetry, or e-poetry, explores the poetics of language through forms that incorporate motion, algorithmic generation, computation, sound, video, interaction, and other new media affordances."
+  },
+  {
+    "name" : "Activist",
+    "desc" : "Works of electronic literature tagged as “activist” are those defined by the author as politically or socially motivated: they often reflect current conflicts, inequalities, and pressing issues of international social concern."
+  },
+  {
+    "name" : "Code",
+    "desc" : "Some works of electronic literature are expressed primarily through code: these include programming languages and works that draw upon code as a language, whether compiled or otherwise."
+  },
+  {
+    "name" : "Locative",
+    "desc" : "The increased accessibility of GPS (Global Positioning System) navigation on devices where electronic literature is experienced has led to the rise of locative works, or works that are tagged and connected to physical spaces."
+  },
+  {
+    "name" : "Mobile",
+    "desc" : "Mobile works make use of portable platforms for consuming media, such as tablets and cell phones. The dominant proprietary platforms for mobile are iOS (Apple) and Android (Google), but web-based technologies are also used for mobile works of electronic literature."
+  },
+  {
+    "name" : "Augmented Reality",
+    "desc" : "Augmented Reality is an emerging medium for combining real-world imagery and experience with an overlay or virtual interface. The augmented reality work of electronic literature becomes a new lens for the viewer’s immediate world."
+  },
+  {
+    "name" : "Remix",
+    "desc" : "A remix is a reworking of the materials from one or several works to produce a new artistic creation. This collection features Nick Montfort’s generative poem <cite>Taroko Gorge</cite> which has been remixed, through both reworking of the algorithm and of the text. The collected works spawned from the generator share a common framework. They represent a moment when an e-poem becomes a platform or poetic form."
+  },
+  {
+    "name" : "Generative",
+    "desc" : "Generative works rely on generative algorithms to create rules-based systems for writing a text. A generative work will never read exactly the same way twice: the underlying logic builds on Oulipian concepts of combinatorial texts."
+  },
+  {
+    "name" : "Hypertext",
+    "desc" : "Hypertext works are linked texts that rely on nonlinear paths, inviting the reader to interact and explore through different nodes or passages. While most hypertext works are web-based, other platforms use the same linking structure."
+  },
+  {
+    "name" : "Flash",
+    "desc" : "Adobe’s Flash platform offers tools for combining scripted behaviors with animation through a  browser plug-in. Flash dominated the interactive media landscape of the web for several decades, but has since faded thanks in large part to the rise of mobile platforms."
+  },
+  {
+    "name" : "Audio",
+    "desc" : "Electronic literature works driven by audio often combine language or fragments of language with other atmospheric or musical elements. These works can range from entirely sound-based experiences to multimedia works that combine audio with other modalities."
+  },
+  {
+    "name" : "Netprov",
+    "desc" : "The genre of netprov is an emergent form of performance art based on live interactions through social media and other web-based platforms. Conceptually, netprov relies on a shared fiction that is performed collectively through role-immersion."
+  },
+  {
+    "name" : "Twitter",
+    "desc" : "As a public-facing social media platform, Twitter has emerged as a space for performance and algorithmic art. Messages on Twitter are limited to 140 characters, forcing a structure that shapes constraints for authors to experiment within."
+  },
+  {
+    "name" : "Prezi",
+    "desc" : "An alternative to PowerPoint and similar presentation-making programs, Prezi is a Flash-based tool for making infinite canvas experiences with path-based navigation. The platforms offers a large canvas for scaling multimedia."
+  },
+  {
+    "name" : "Video",
+    "desc" : "Electronic literature works that rely on or are experienced as video might be generated through traditional recording, algorithmic manipulation, or other methods of production."
+  },
+  {
+    "name" : "Virtual Reality",
+    "desc" : "Virtual reality works rely on a number of emerging platforms for building immersive experiences. These works are designed to dominate the sensory intake of a reader, inviting them to occupy another world."
+  },
+  {
+    "name" : "Performance",
+    "desc" : "While many works of electronic literature are experienced as software or exist perpetually on the web, some are explicitly performance-based and include elements intended for a particular time or space."
+  },
+  {
+    "name" : "Java",
+    "desc" : "Java is an object-oriented programming language primarily used as a web browser plug-in for creating interactive media."
+  },
+  {
+    "name" : "Game",
+    "desc" : "While interactivity is a part of many works of electronic literature, only some works are explicitly designed to be played. These works are tagged as games, and are often in conversation with computer and videogame traditions."
+  },
+  {
+    "name" : "Oulipo",
+    "desc" : "The Oulipo tradition of experimental and combinatorial texts takes computational methods that predate computing and draws them into electronic space. Works identified by their authors as part of this tradition are tagged."
+  },
+  {
+    "name" : "Kinect",
+    "desc" : "Microsoft’s Kinect platform offers a toolset for gesture-based interaction with a work. Works built using Kinect can take advantage of body recognition as well as hand gestures for interface controls."
+  },
+  {
+    "name" : "Installation",
+    "desc" : "Pieces that rely on physical hardware and unique configuration are designated as installations. While these works can typically only be fully experienced within a gallery setting, they are documented here for archival study."
+  },
+  {
+    "name" : "Bot",
+    "desc" : "Automated software designed to run independently as generators, bots are developed in a range of programming languages and typically publish to social media platforms such as Twitter."
+  },
+  {
+    "name" : "Interactive Fiction",
+    "desc" : "The tradition of interactive fiction builds from the heritage of text adventures, which rely on a parser to interpret verb and noun based commands. Interactive fiction works allow the reader to participate in a story and explore the space."
+  },
+  {
+    "name" : "BASIC",
+    "desc" : "BASIC (Beginner’s All-purpose Symbolic Instruction Code) is an accessible programming language for building stand-alone applications and algorithms. The language was introduced in the 60s and has evolved through many versions, including Microsoft’s Visual Basic."
+  },
+  {
+    "name" : "Ruby",
+    "desc" : "Ruby is an open source, object-oriented programming language popular for stand-alone applications as well as for web purposes with Ruby on Rails."
+  },
+  {
+    "name" : "Twine",
+    "desc" : "Twine is an open-source platform for making hypertext games and interactive narratives developed by Chris Klimas. Works produced in Twine use web technologies, including HTML5, JavaScript, and CSS."
+  },
+  {
+    "name" : "Comics",
+    "desc" : "Comics (sequential art) draw on visual traditions of combining image and text in ordered sequences to construct meaning. Digital comics disrupt the reliance of these sequences on paginated books, allowing for experimentation with space and motion."
+  },
+  {
+    "name" : "AutoCAD",
+    "desc" : "AutoCAD is a program for computer-aided design typically used for prototyping three-dimensional objects and buildings."
+  },
+  {
+    "name" : "JavaScript",
+    "desc" : "The native scripting language of the web, JavaScript was first introduced in 1995 and has grown in significance in electronic literature for creating everything from generative algorithms to interactions and animations."
+  },
+  {
+    "name" : "Database",
+    "desc" : "Database-driven works often point to MySQL, NoSQL, or external databases as sources for algorithmically-combined content."
+  },
+  {
+    "name" : "Perl",
+    "desc" : "Introduced in 1987, Perl is a programming language designed for allowing complex programming efficiently."
+  },
+  {
+    "name" : "Scalar",
+    "desc" : "Scalar is a web-based content management system designed for multimodal scholarship by The Alliance for Networking Visual Culture. While it is typically used for scholarship, it can be used to create hypertext works of electronic literature."
+  },
+  {
+    "name" : "Fanfiction",
+    "desc" : "Works of fanfiction, or transformative works, take inspiration from other fictional universes to build new stories and commentary. The tradition of fanfiction has been made much more visible by the rise of digital fiction communities."
+  },
+  {
+    "name" : "Email",
+    "desc" : "Email-based works rely on email as a tool of communication or provide methods for subverting or transforming the purpose and experience of email to literary ends."
+  }
+]

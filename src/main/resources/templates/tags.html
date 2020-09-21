@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<meta charset="UTF-8">
+<!--   get the value of title key passed by the server and replaces into the html-->
+<title th:text="${title}"></title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<!--<link th:rel="stylesheet" th:href="@{/css/multi-select.css}"/> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/css/multi-select.min.css" media="screen" rel="stylesheet" type="text/css"/>
+<script th:src='@{/js/utils.js}'></script>
+<script th:src='@{/js/tags.js}'></script>
+</head>
+<body style="background-color:lightgray">
+<div class="container">
+    <select id="tags">
+        <option>NOT SELECTED</option>
+    </select>
+    <br>
+    <label for="name">Tag Name</label>
+    <input type="text" id="name"/>
+    <br>
+    <label for="desc">Tag Description</label>
+    <textarea id="desc"></textarea>
+    <br>
+    <button id="adicionar_tag">Add Tag</button>
+    <br>
+    <button id="guardar_tag">Save Tag</button>
+
+
+</div>
+
+</body>
+</html>

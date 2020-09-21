@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<!--needed to use thymeleaf expressions-->
+<html xmlns:th="http://www.thymeleaf.org">
+    <meta charset="UTF-8">
+    <!--   get the value of title key passed by the server and replaces into the html-->
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+    <!--<link th:rel="stylesheet" th:href="@{/css/multi-select.css}"/> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/css/multi-select.min.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script th:src='@{/js/utils.js}'></script>
+    <script th:src='@{/js/works.js}'></script>
+    <script th:src='@{/js/work.js}'></script>
+</head>
+<body style="background-color:lightgray">
+<div class="container">
+    <div id="editFields">
+    <h3>Edit Works</h3>
+    <select id="worksDropDown" name="worksDropDown">
+        <option selected="selected">NOT SELECTED</option>
+    </select>
+    <br><br>
+    <label for="authorFirst">Author Firstname:</label>
+    <input type="text" id="authorFirst" name="editAuthorFirst" required>
+    <label for="authorLast">Author Lastname:</label>
+    <input type="text" id="authorLast" name="editAuthorLast" required>
+    <br>
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="editTitle" required>
+    <br>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="editCity">
+    <label for="country">Country:</label>
+    <input type="text" id="country" name="editCountry" required>
+    <br>
+    <label for="language">Language:</label>
+    <input type="text" id="language" name="editLanguage" required>
+    <br>
+    <label for="url">URL:</label>
+    <input type="text" id="url" name="editsURL" required>
+    <br>
+    <label for="banner">Banner:</label>
+    <input type="text" id="banner" name="editBanner">
+    <br>
+    <label for="icon">Icon:</label>
+    <input type="text" id="icon" name="editIcon">
+    <br>
+
+    <select id="tags" name="tagsDropDown" multiple>
+
+    </select>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/js/jquery.multi-select.js" integrity="sha512-X1iMoI6a2IoZFOheUVf3ZmcD1L7zN/eVtig6enIq8yBlwDcbPVao/LG8+/SdjcVn72zF+A/viRLPSxfXLu/rbQ==" crossorigin="anonymous"></script>
+        <!--
+    <label for="tags">Keywords:</label>
+    <input type="text" id="tags" name="editTags">
+    <br> -->
+    <label for="beginLinks">Begin Links:</label>
+    <input type="text" id="beginLinks" name="editBeginLinks">
+    <br>
+    <label for="instructions">Instructions:</label>
+    <input type="text" id="instructions" name="editInstructions">
+    <br>
+    <label for="year">Year:</label>
+    <input type="text" id="year" name="editYear" required>
+    <br>
+    <label for="techDetails">Tech Details:</label>
+    <input type="text" id="techDetails" name="editTechDetails">
+    <br>
+    <label for="requirements">Requirements:</label>
+    <input type="text" id="requirements" name="editRequirements">
+    <br>
+    <label for="editorialStatement">Editorial Statement:</label>
+    <input type="text" id="editorialStatement" name="editEditorialStatement">
+    <br>
+    <label for="video">Video:</label>
+    <input type="text" id="video" name="editVideo">
+    <br>
+    <label for="externalUrl">External URL:</label>
+    <input type="text" id="externalUrl" name="editExternalURL">
+    <br>
+    <label for="copyright">Copyright:</label>
+    <input type="text" id="copyright" name="editCopyright" required>
+    <br>
+    <label for="previousPublication">Previous Publication:</label>
+    <input type="text" id="previousPublication" name="editPreviousPublication">
+    <br>
+    <label for="references">References:</label>
+    <input type="text" id="references" name="editReferences">
+    <br>
+    <div class="form-group">
+        <button type="button" id="editWork">SUBMIT</button>
+    </div>
+    </div>
+
+
+
+    <form action="/files/works" method="get">
+        <div class="form-group">
+            <button type="submit">Get Works</button>
+        </div>
+    </form>
+
+    <form action="/files/tags" method="get">
+        <div class="form-group">
+            <button type="submit">Get Tags</button>
+        </div>
+    </form>
+
+</div>
+<script type="text/javascript">
+
+
+
+    /*
+    $('#worksDropDown').on('click', function (evt) {
+        evt.preventDefault();
+
+        //console.log($.get(location.origin+"/works"));
+
+        $.ajax({
+            url:location.origin+"/works",
+            method:"get",
+            contentType:'application/json',
+            done: function (data) {
+                var s = "";
+                for (var i = 0; i < data.length; i++){
+                    s += "<option value=" + data[i].workTitle + ">" + data[i].workTitle + "</option>";
+                }
+                $("#worksDropDown").html(s);
+            }
+        });
+
+    });*/
+
+    $("#submitArtist").on('click', function (evt) {
+        evt.preventDefault();
+
+        var artist = {};
+
+        $("form").find(':input').each(function (index, el) {
+
+            artist[el.id] = el.value;
+
+            // Don't submit the form
+            event.preventDefault();
+
+            if(el.id == "artistName" && el.value == "") {
+                alert("Error! Please fill in Artist Name.");
+                return;
+            }
+
+            localStorage.setItem(el.id, el.value);
+
+        });
+
+
+        var name = localStorage.getItem("artistName");
+        var statement = localStorage.getItem("createArtistStatement");
+        var bio = localStorage.getItem("createArtistBio");
+
+        localStorage.setItem(name + "-statement", statement);
+        localStorage.setItem(name + "-bio", bio);
+
+    });
+
+    $("#submitWork").on('click', function (evt) {
+        evt.preventDefault();
+
+        var work = {};
+        $("form").find(':input').each(function (index, el) {
+
+            //console.log("id "+el.id+":"+el.value);
+
+            work[el.id] = el.value;
+
+            // Don't submit the form
+            event.preventDefault();
+
+            if((el.id == "createURL" || el.id == "createTitle" ||
+                el.id == "createAuthor" || el.id == "createCountry" ||
+                el.id == "createLanguage" || el.id == "year" ||
+                el.id == "createCopyright") && el.value == "")
+            {
+                alert("Error! Please fill in all mandatory fields.");
+                return;
+            }
+
+            localStorage.setItem(el.id, el.value);
+
+        });
+
+
+        var authorName = localStorage.getItem("createAuthor");
+
+        var statement, bio;
+
+        statement = localStorage.getItem(authorName + "-statement");
+        bio = localStorage.getItem(authorName + "-bio");
+
+        var artist = {
+            statement: statement,
+            bio: bio
+        };
+
+        var location = {
+            city : localStorage.getItem("createCity"),
+            country : localStorage.getItem("createCountry")
+        };
+        //TODO: several tags
+        var tags = localStorage.getItem("createTags");
+        var beginLinks = {
+            displayText: "Begin",
+            link: localStorage.getItem("createBeginLinks")
+        };
+
+        //TODO:
+        var previousPublication = {
+
+        };
+
+        var references = {
+
+        };
+
+        var works = {
+            url: localStorage.getItem("createURL"),
+            title: localStorage.getItem("createTitle"),
+            authorDisplayName: localStorage.getItem("createAuthor"),
+            authorData: authorName,
+            node: "create",
+            banner: localStorage.getItem("createBanner"),
+            icon: localStorage.getItem("createIcon"),
+            location: location,
+            tags: tags,
+            language: localStorage.getItem("createLanguage"),
+            beginLinks: beginLinks,
+            instructions: localStorage.getItem("createInstructions"),
+            year: localStorage.getItem("createYear"),
+            techDetails: localStorage.getItem("createTechDetails"),
+            requirements: localStorage.getItem("createRequirements"),
+            artist: artist,
+            editorialStatement: localStorage.getItem("createEditorialStatement"),
+            sourceFiles: "",
+            video: localStorage.getItem("createVideo"),
+            externalURL: localStorage.getItem("createExternalURL"),
+            copyright: localStorage.getItem("createCopyright"),
+            previousPublication: previousPublication,
+            references: references
+        };
+
+        var worksJSON = JSON.parse(JSON.stringify(works));
+
+        console.log(worksJSON);
+
+        $.ajax({
+            url:location.origin+"/works",
+            method:"post",
+            contentType:'application/json',
+            data:worksJSON
+        });
+
+    });
+</script>
+</body>
+</html>
